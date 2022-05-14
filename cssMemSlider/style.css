@@ -133,13 +133,12 @@ body{
 }
 @media only screen and (max-width : 320px){
 	body{
-		align-items: normal;
+		align-items: center;
 	}
 	.description{
 		margin-top: 6vh;
 	}
 	.container{
-		padding-top: 20vh;
 		height: 40%;
 		width: 95%;
 		margin: 0 auto;
