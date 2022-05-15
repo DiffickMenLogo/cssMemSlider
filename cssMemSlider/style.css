@@ -132,6 +132,21 @@ body{
 	display: none;
 }
 @media only screen and (max-width : 320px){
+	.text{
+		width: 100%;
+	}
+	.undo-text3{
+		width: 70%;
+	}
+	.undo-text1{
+		width: 70%;
+	}
+	.undo-text2{
+		width: 70%;
+	}
+	.undo-text4{
+		width: 70%;
+	}
 	body{
 		align-items: center;
 	}
