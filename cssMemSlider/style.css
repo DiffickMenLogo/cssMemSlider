@@ -1,0 +1,164 @@
+body{
+    background-color: #212121;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.container{
+    width: 90%;
+    height: 70%;
+    display: block;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+}
+.container input{
+    display: none;
+}
+.container label {
+	cursor: pointer;
+	display: inline-block;
+	border: 0.2vh solid aquamarine;
+	background-color: aquamarine;
+	height: 3vh;
+	margin: 3vh 2vh 3vh 2vh;
+	position: relative;
+	width: 3vh;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+#slide1:checked ~ .lower-case > .controls > label:nth-of-type(1),
+#slide2:checked ~ .lower-case > .controls > label:nth-of-type(2),
+#slide3:checked ~ .lower-case > .controls > label:nth-of-type(3),
+#slide4:checked ~ .lower-case > .controls > label:nth-of-type(4){
+	border: 0.2vh solid aquamarine;
+	background-color: #212121;
+}
+#slide1:checked ~ .lower-case > .controls > label:nth-of-type(1):hover,
+#slide2:checked ~ .lower-case > .controls > label:nth-of-type(2):hover,
+#slide3:checked ~ .lower-case > .controls > label:nth-of-type(3):hover,
+#slide4:checked ~ .lower-case > .controls > label:nth-of-type(4):hover{
+	border: 0.2vh solid white;
+}
+.container label:hover{
+	border: 0.2vh solid white;
+	background: white;
+}
+.slider{
+    background: #543939;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+	border: solid 0.1vh #212121;
+	border-radius: 2vh;
+}
+.slides{
+    height: inherit;
+	opacity: 0;
+    position: absolute;
+    width: inherit;
+	z-index: 0;
+    background-size: 100% 100%;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4{
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.slide1{ background-image: url(../cssMemSlider/img/mem1.jpg);}
+.slide2{ background-image: url(../cssMemSlider/img/mem2.jpg);}
+.slide3{ background-image: url(../cssMemSlider/img/mem3.jpg);}
+.slide4{ background-image: url(../cssMemSlider/img/mem4.jpg);}
+
+.lower-case{
+	display: flex;
+	justify-content: space-between;
+}
+.text{
+	opacity: 0;
+	position: absolute;
+	z-index: 0;
+	font-size: 4vh;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.06em;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~.lower-case > .description > .undo-text1,
+#slide2:checked ~.lower-case > .description > .undo-text2,
+#slide3:checked ~.lower-case > .description > .undo-text3,
+#slide4:checked ~.lower-case > .description > .undo-text4{
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	color: white;
+}
+
+.undo-text span{
+	display: none;
+}
+@media only screen and (max-width : 320px){
+	.text{
+		width: 100%;
+	}
+	.undo-text3{
+		width: 70%;
+	}
+	.undo-text1{
+		width: 70%;
+	}
+	.undo-text2{
+		width: 70%;
+	}
+	.undo-text4{
+		width: 70%;
+	}
+	body{
+		align-items: center;
+	}
+	.description{
+		margin-top: 6vh;
+	}
+	.container{
+		height: 40%;
+		width: 95%;
+		margin: 0 auto;
+	}
+	.controls{
+		margin: 0 auto;
+	}	
+}
